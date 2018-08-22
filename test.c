@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void myFunction(int* x, int* y) { //very import to add "int*" when passing addresses
+void myFunction(int *x, int* y) { //very import to add "int*" or "int *" when passing addresses
 	*x = *x+2;
 	*y = *y-3;
 }
