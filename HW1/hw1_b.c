@@ -15,14 +15,38 @@ number of trials allowed.*/
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h> //added to get rid of warning of implicit declaration
 
 #define MAX_NO_TRIALS 10
-
-void srand(){
 	
-}
+
 
 int main(){
-	 printf("%d", rand());
+	int ans, trial;
+	srand(time(NULL));
+	int randNum = 0 + rand()%101;
+	//printf("%d\n", randNum); //uncomment to reveal answer from the start
+	
+	printf("Try and guess the mystery number: ");
+	trial = 0;
+	while (ans != randNum && trial < MAX_NO_TRIALS) {
+		scanf("%d", &ans);
+		if(ans == randNum) {
+			printf("\nCorrect! You guessed %d and the number was %d, Good job!\n", ans, randNum);
+		} else if(ans > randNum && trial != (MAX_NO_TRIALS-1)) {
+			trial++;
+ 			printf("\nNope! %d is higher than the mystery number. Try again!", ans);
+ 			printf("\nYou have %d guess(es) left: ", 10-trial);
+		} else if(ans < randNum && trial != (MAX_NO_TRIALS-1)) {
+			trial++;
+ 			printf("\nNope! %d is lower than the mystery number. Try again!", ans);
+ 			printf("\nYou have %d guess(es) left: ", 10-trial);
+		} else {
+			trial++;
+			printf("\nLast guess of %d was incorrect, the answer is %d. Game over!\n", ans, randNum);
+		}
+	}
+
+
 	return 0;
 }
