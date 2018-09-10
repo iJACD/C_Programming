@@ -26,7 +26,7 @@ int main(){
 	int ans, trial;
 	srand(time(NULL));
 	int randNum = 0 + rand()%101;
-	/*printf("%d\n", randNum); uncomment to reveal answer from the start*/
+	printf("%d\n", randNum); //uncomment to reveal answer from the start
 	
 	printf("Try and guess the mystery number: ");
 	trial = 0;
