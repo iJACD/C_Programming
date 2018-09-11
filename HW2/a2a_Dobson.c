@@ -1,3 +1,9 @@
+/*HW2 Problem a
+JohnAnthony Dobson
+CS 3335
+Fall 2018
+9/10/18*/
+
 #include <stdio.h>
 /*Write a C-program to print a table showing how many times a digit appears in a number. 
 The number will be entered by the user. For example, if the user enters 378677189, then 
@@ -7,6 +13,7 @@ Digit: 0123456789
 Frequency: 0 1 0 1 0 0 1 3 2 1
 
 Remember to allow the users to enter their own choice of input number. [Hint: arrays could be useful]*/
+
 int checkFrequency(int *arr, int n) {
 
    switch(n) {
